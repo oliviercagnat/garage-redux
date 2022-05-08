@@ -7,13 +7,11 @@ import { fetchCars } from '../actions';
 import Aside from '../components/aside';
 
 class CarsIndex extends Component {
-  // fetchCars when mounting
   componentWillMount() {
     this.props.fetchCars(this.props.garage);
   }
 
   render() {
-    // if no cars
     if (this.props.cars.length === 0) {
       return [
         <Aside key="aside" garage={this.props.garage}>
@@ -22,7 +20,7 @@ class CarsIndex extends Component {
         <div className="no-car" key="nocar">No car yet</div>
       ];
     }
-    // if cars
+
     return [
       <Aside key="aside" garage={this.props.garage}>
         <Link to="/cars/new">Add a car</Link>
@@ -47,7 +45,6 @@ class CarsIndex extends Component {
   }
 };
 
-// Connect to Redux State and access the cars and garage
 function mapStateToProps(state) {
   return {
     cars: state.cars,
@@ -55,10 +52,8 @@ function mapStateToProps(state) {
   };
 }
 
-// Connect to the Action
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchCars }, dispatch);
 }
 
-// Connect with both Actions and State
 export default connect(mapStateToProps, mapDispatchToProps)(CarsIndex);

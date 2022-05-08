@@ -7,13 +7,7 @@ import Aside from '../components/aside';
 import { addCar } from '../actions';
 
 class CarsNew extends Component {
-  // Callback that we have whenever the form is submitted.
-  // 1: we trigger the addCar action and pass values
-  // 2: we are passing a callback to the addCar action.
-  // 3: the callback comes back, and this code just pushes
-  // on the history the slash "/"
-  // 4: So now that we have the form, we create a Post (localhost:8080/posts/new)
-  // 5: it will submit the post and bring back to (localhost:8080)
+
   onSubmit = (values) => {
     this.props.addCar(this.props.garage, values, () => {
       this.props.history.push('/'); // Navigate after submit
@@ -51,17 +45,14 @@ class CarsNew extends Component {
   }
 };
 
-// Connect to Redux State and access the garage.
 function mapStateToProps(state) {
   return {
     garage: state.garage
   };
 }
 
-// When we connect a redux component containing a form, we export default reduxForm with specific ID
-// Then connect with the action we want to use in the form.
 export default reduxForm({
-  form: 'newCarForm' // a unique identifier
+  form: 'newCarForm'
 })(
   connect(mapStateToProps, { addCar })(CarsNew)
 );

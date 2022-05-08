@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Garage structure
 const Aside = (props) => {
   return (
     <div className="aside">
