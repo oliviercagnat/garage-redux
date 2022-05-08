@@ -1,10 +1,12 @@
 # Redux garage 🚘
 
-React app exercise making use of [React Router](https://reacttraining.com/react-router/). Application for garage (car repair shop ⚒) owners: a way to keep track of the cars entering their garage. Basically, a little CRUD app backed by a REST API.
+React app exercise making use of [React Router](https://reacttraining.com/react-router/). Application for garage (car repair shop ⚒) owners: a way to keep track of the cars entering their garage. Basically, a little CRUD app backed by a REST API. 
+
+Exercise from Le Wagon Coding Bootcamp.
 
 # Outlook of the app
 
-<!-- Video here -->
+https://user-images.githubusercontent.com/75303846/167282684-672dc9f0-2c98-4246-bc5d-e50377474a4c.mp4
 
 ## Getting started
 
@@ -12,10 +14,9 @@ React app exercise making use of [React Router](https://reacttraining.com/react-
 Started from the [Redux Router boilerplate](https://github.com/yannklein/react-workshop.git).
 
 ```bash
-cd ~/code/<github_username>
 
 # Download boilerplate to new project `garage-redux`
-git clone git@github.com:lewagon/redux-router-boilerplate.git garage-redux
+gh repo clone oliviercagnat/garage-redux garage-redux
 cd garage-redux
 
 # Destroy existing boilerplate git history, and start a new one
