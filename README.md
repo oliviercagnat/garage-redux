@@ -25,10 +25,6 @@ git init
 git add .
 git commit -m "Initial commit with boilerplate"
 
-# Create a GitHub repo, and push!
-hub create
-git push origin master
-
 # Install the dependencies listed in the `package.json` file with:
 yarn install
 
